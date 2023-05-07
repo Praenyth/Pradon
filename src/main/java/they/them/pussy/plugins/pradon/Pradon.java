@@ -6,7 +6,9 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import they.them.pussy.plugins.pradon.commands.PradonCommand;
+import they.them.pussy.plugins.pradon.events.PradonGameToggleEvent;
 import they.them.pussy.plugins.pradon.listeners.GameSwitchListener;
+import they.them.pussy.plugins.pradon.listeners.PlayerDeathListener;
 import they.them.pussy.plugins.pradon.listeners.PlayerHungerLossListener;
 import they.them.pussy.plugins.pradon.listeners.PlayerPickupListener;
 import they.them.pussy.plugins.pradon.runnables.GameActiveRunnable;
@@ -21,6 +23,7 @@ public final class Pradon extends JavaPlugin {
     public static GameActiveRunnable runnable = new GameActiveRunnable();
     public static Component messagePrefix = Component.text("Pradon - ").color(NamedTextColor.GREEN);
     public static Map<Player, Material> playerItems = new HashMap<>();
+    public static PradonGameToggleEvent gameToggleEvent;
 
     @Override
     public void onEnable() {
@@ -28,6 +31,7 @@ public final class Pradon extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new GameSwitchListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerPickupListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerHungerLossListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerDeathListener(), this);
 
         instance.getConfig().options().copyDefaults();
         instance.saveDefaultConfig();
@@ -36,5 +40,7 @@ public final class Pradon extends JavaPlugin {
     }
 
     @Override
-    public void onDisable() {}
+    public void onDisable() {
+        runnable.cancel();
+    }
 }

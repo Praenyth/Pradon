@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.potion.PotionEffect;
 import they.them.pussy.plugins.pradon.Pradon;
 import they.them.pussy.plugins.pradon.events.PradonGameToggleEvent;
 
@@ -16,6 +17,10 @@ public class GameSwitchListener implements Listener {
         if (event.isActive()) {
             // Start game
             for (Player pl : Bukkit.getOnlinePlayers()) {
+                for (PotionEffect potionEffect : pl.getActivePotionEffects()) {
+                    pl.removePotionEffect(potionEffect.getType());
+                }
+                pl.getInventory().clear();
                 pl.sendMessage(
                         Pradon.messagePrefix
                                 .append(
@@ -30,6 +35,7 @@ public class GameSwitchListener implements Listener {
         } else {
             // Stop game
             for (Player pl : Bukkit.getOnlinePlayers()) {
+                pl.getInventory().clear();
                 pl.sendMessage(
                         Pradon.messagePrefix
                                 .append(

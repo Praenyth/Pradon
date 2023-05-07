@@ -46,11 +46,19 @@ public class GameActiveRunnable extends BukkitRunnable {
                                     (int) (Math.random() * Pradon.instance.getConfig().getStringList("Items").size())
                             )
             );
-            for (int i = 1; i <= 36; i++) {
-                pl.getWorld().dropItemNaturally(
-                        pl.getLocation(),
-                        new ItemStack(item, item.getMaxStackSize())
-                );
+            switch (pl.getGameMode()) {
+                case ADVENTURE:
+                case SURVIVAL:
+                    for (int i = 1; i <= 36; i++) {
+                        pl.getWorld().dropItemNaturally(
+                                pl.getLocation(),
+                                new ItemStack(item, item.getMaxStackSize())
+                        );
+                    }
+                    break;
+                case SPECTATOR:
+                case CREATIVE:
+                    break;
             }
 
             Pradon.playerItems.put(pl, item);
