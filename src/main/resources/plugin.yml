@@ -6,3 +6,20 @@ prefix: Pradon
 authors: [Prae]
 description: Updated random item challenge because the old one is so very outdated
 website: https://github.com/Praenyth
+permissions:
+  pradon.admin:
+    description: "Gives access to all Pradon commands"
+    default: op
+    children:
+      pradon.admin.setgivedelay:
+        description: "Allows setting the give delay"
+        default: op
+      pradon.admin.togglegame:
+        description: "Allows toggling the game"
+        default: op
+      pradon.admin.additem:
+        description: "Allows adding items to the item pool"
+        default: op
+      pradon.admin.removeitem:
+        description: "Allows removing items from the item pool"
+        default: op
