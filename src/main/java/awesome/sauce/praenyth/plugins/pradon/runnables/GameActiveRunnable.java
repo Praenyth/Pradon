@@ -1,15 +1,14 @@
-package they.them.pussy.plugins.pradon.runnables;
+package awesome.sauce.praenyth.plugins.pradon.runnables;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
-import they.them.pussy.plugins.pradon.Pradon;
+import awesome.sauce.praenyth.plugins.pradon.Pradon;
 
 public class GameActiveRunnable extends BukkitRunnable {
 

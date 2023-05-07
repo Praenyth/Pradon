@@ -1,4 +1,4 @@
-package they.them.pussy.plugins.pradon.api;
+package awesome.sauce.praenyth.plugins.pradon.api;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;

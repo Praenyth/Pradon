@@ -1,12 +1,12 @@
-package they.them.pussy.plugins.pradon.listeners;
+package awesome.sauce.praenyth.plugins.pradon.listeners;
 
+import awesome.sauce.praenyth.plugins.pradon.api.PlayerChecks;
+import awesome.sauce.praenyth.plugins.pradon.events.PradonGameToggleEvent;
 import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import they.them.pussy.plugins.pradon.Pradon;
-import they.them.pussy.plugins.pradon.api.PlayerChecks;
-import they.them.pussy.plugins.pradon.events.PradonGameToggleEvent;
+import awesome.sauce.praenyth.plugins.pradon.Pradon;
 
 public class PlayerDeathListener implements Listener {
 

@@ -1,4 +1,4 @@
-package they.them.pussy.plugins.pradon.events;
+package awesome.sauce.praenyth.plugins.pradon.events;
 
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;

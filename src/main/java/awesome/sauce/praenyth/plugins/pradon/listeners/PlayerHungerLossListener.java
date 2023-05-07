@@ -1,10 +1,10 @@
-package they.them.pussy.plugins.pradon.listeners;
+package awesome.sauce.praenyth.plugins.pradon.listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
-import they.them.pussy.plugins.pradon.Pradon;
+import awesome.sauce.praenyth.plugins.pradon.Pradon;
 
 public class PlayerHungerLossListener implements Listener {
 

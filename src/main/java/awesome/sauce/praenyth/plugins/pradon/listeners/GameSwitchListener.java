@@ -1,5 +1,6 @@
-package they.them.pussy.plugins.pradon.listeners;
+package awesome.sauce.praenyth.plugins.pradon.listeners;
 
+import awesome.sauce.praenyth.plugins.pradon.runnables.GameActiveRunnable;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
@@ -7,9 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffect;
-import they.them.pussy.plugins.pradon.Pradon;
-import they.them.pussy.plugins.pradon.events.PradonGameToggleEvent;
-import they.them.pussy.plugins.pradon.runnables.GameActiveRunnable;
+import awesome.sauce.praenyth.plugins.pradon.Pradon;
+import awesome.sauce.praenyth.plugins.pradon.events.PradonGameToggleEvent;
 
 public class GameSwitchListener implements Listener {
 

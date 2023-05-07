@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>they.them.pussy.plugins</groupId>
+    <groupId>awesome.sauce.praenyth.plugins</groupId>
     <artifactId>Pradon</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
 
     <name>Pradon</name>
@@ -44,11 +44,11 @@
                             <relocations>
                                 <relocation>
                                     <pattern>cloud.commandframework</pattern>
-                                    <shadedPattern>nyth.prae.awesome.plugins.shaded.cloud</shadedPattern>
+                                    <shadedPattern>awesome.sauce.praenyth.plugins.shaded.cloud</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>io.leangen.geantyref</pattern>
-                                    <shadedPattern>nyth.prae.awesome.plugins.shaded.typetoken</shadedPattern>
+                                    <shadedPattern>awesome.sauce.praenyth.plugins.shaded.typetoken</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>

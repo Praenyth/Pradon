@@ -1,5 +1,6 @@
-package they.them.pussy.plugins.pradon.commands;
+package awesome.sauce.praenyth.plugins.pradon.commands;
 
+import awesome.sauce.praenyth.plugins.pradon.commands.subcommands.PradonToggle;
 import cloud.commandframework.annotations.AnnotationParser;
 import cloud.commandframework.annotations.CommandMethod;
 import cloud.commandframework.context.CommandContext;
@@ -9,10 +10,9 @@ import cloud.commandframework.paper.PaperCommandManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.command.CommandSender;
-import they.them.pussy.plugins.pradon.Pradon;
-import they.them.pussy.plugins.pradon.commands.subcommands.PradonGiveDelay;
-import they.them.pussy.plugins.pradon.commands.subcommands.PradonItemManagement;
-import they.them.pussy.plugins.pradon.commands.subcommands.PradonToggle;
+import awesome.sauce.praenyth.plugins.pradon.Pradon;
+import awesome.sauce.praenyth.plugins.pradon.commands.subcommands.PradonGiveDelay;
+import awesome.sauce.praenyth.plugins.pradon.commands.subcommands.PradonItemManagement;
 
 import java.util.function.Function;
 

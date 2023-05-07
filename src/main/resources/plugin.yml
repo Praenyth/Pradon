@@ -1,6 +1,6 @@
 name: Pradon
 version: '${project.version}'
-main: they.them.pussy.plugins.pradon.Pradon
+main: awesome.sauce.praenyth.plugins.pradon.Pradon
 api-version: 1.19
 prefix: Pradon
 authors: [Prae]

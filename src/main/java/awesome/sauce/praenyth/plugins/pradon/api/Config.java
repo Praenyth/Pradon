@@ -1,7 +1,7 @@
-package they.them.pussy.plugins.pradon.api;
+package awesome.sauce.praenyth.plugins.pradon.api;
 
 import org.bukkit.Material;
-import they.them.pussy.plugins.pradon.Pradon;
+import awesome.sauce.praenyth.plugins.pradon.Pradon;
 
 public class Config {
     public static void setAndSaveConfig(String path, Object value) {
