@@ -5,6 +5,7 @@ import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -13,7 +14,7 @@ import they.them.pussy.plugins.pradon.Pradon;
 public class GameActiveRunnable extends BukkitRunnable {
 
     public void start() {
-        Pradon.runnable.runTaskLaterAsynchronously(Pradon.instance, 20L * Pradon.instance.getConfig().getInt("Item-Give-Delay"));
+        Pradon.runnable.runTaskTimer(Pradon.instance, 0, 20L * Pradon.instance.getConfig().getInt("Item-Give-Delay"));
     }
 
     public void cancel() {
@@ -45,7 +46,15 @@ public class GameActiveRunnable extends BukkitRunnable {
                                     (int) (Math.random() * Pradon.instance.getConfig().getStringList("Items").size())
                             )
             );
-            pl.getInventory().addItem(new ItemStack(item, item.getMaxStackSize()*36));
+            for (int i = 1; i <= 36; i++) {
+                pl.getWorld().dropItemNaturally(
+                        pl.getLocation(),
+                        new ItemStack(item, item.getMaxStackSize())
+                );
+            }
+
+            Pradon.playerItems.put(pl, item);
+
         }
     }
 }
