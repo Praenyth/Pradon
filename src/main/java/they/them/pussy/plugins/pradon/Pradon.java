@@ -3,6 +3,7 @@ package they.them.pussy.plugins.pradon;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.plugin.java.JavaPlugin;
+import they.them.pussy.plugins.pradon.commands.PradonCommand;
 import they.them.pussy.plugins.pradon.listeners.GameSwitchListener;
 import they.them.pussy.plugins.pradon.runnables.GameActiveRunnable;
 
@@ -21,6 +22,8 @@ public final class Pradon extends JavaPlugin {
 
         instance.getConfig().options().copyDefaults();
         instance.saveDefaultConfig();
+
+        PradonCommand.register();
     }
 
     @Override

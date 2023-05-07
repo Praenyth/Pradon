@@ -10,6 +10,8 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.command.CommandSender;
 import they.them.pussy.plugins.pradon.Pradon;
+import they.them.pussy.plugins.pradon.commands.subcommands.PradonGiveDelay;
+import they.them.pussy.plugins.pradon.commands.subcommands.PradonItemManagement;
 import they.them.pussy.plugins.pradon.commands.subcommands.PradonToggle;
 
 import java.util.function.Function;
@@ -45,6 +47,8 @@ public class PradonCommand {
 
         // Register subcommands
         annotationParser.parse(new PradonToggle());
+        annotationParser.parse(new PradonGiveDelay());
+        annotationParser.parse(new PradonItemManagement());
 
     }
 
