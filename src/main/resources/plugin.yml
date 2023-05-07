@@ -1,0 +1,8 @@
+name: Pradon
+version: '${project.version}'
+main: they.them.pussy.plugins.pradon.Pradon
+api-version: 1.19
+prefix: Pradon
+authors: [Prae]
+description: Updated random item challenge because the old one is so very outdated
+website: https://github.com/Praenyth
