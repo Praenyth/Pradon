@@ -40,7 +40,5 @@ public final class Pradon extends JavaPlugin {
     }
 
     @Override
-    public void onDisable() {
-        runnable.cancel();
-    }
+    public void onDisable() {}
 }

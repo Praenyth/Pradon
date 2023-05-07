@@ -9,6 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.potion.PotionEffect;
 import they.them.pussy.plugins.pradon.Pradon;
 import they.them.pussy.plugins.pradon.events.PradonGameToggleEvent;
+import they.them.pussy.plugins.pradon.runnables.GameActiveRunnable;
 
 public class GameSwitchListener implements Listener {
 
@@ -46,6 +47,7 @@ public class GameSwitchListener implements Listener {
                 );
             }
             Pradon.runnable.cancel();
+            Pradon.runnable = new GameActiveRunnable();
             Pradon.active = false;
         }
     }

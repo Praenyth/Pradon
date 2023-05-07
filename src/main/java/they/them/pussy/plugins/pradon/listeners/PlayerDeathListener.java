@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import they.them.pussy.plugins.pradon.Pradon;
 import they.them.pussy.plugins.pradon.api.PlayerChecks;
+import they.them.pussy.plugins.pradon.events.PradonGameToggleEvent;
 
 public class PlayerDeathListener implements Listener {
 
@@ -17,8 +18,8 @@ public class PlayerDeathListener implements Listener {
             event.getEntity().getInventory().clear();
             event.getEntity().setGameMode(GameMode.SPECTATOR);
             if (PlayerChecks.checkForLastPlayer()) {
-                Pradon.runnable.cancel();
-                Pradon.active = false;
+                Pradon.gameToggleEvent = new PradonGameToggleEvent(false);
+                Pradon.gameToggleEvent.callEvent();
             }
         }
 
